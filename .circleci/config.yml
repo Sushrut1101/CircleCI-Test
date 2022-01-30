@@ -1,0 +1,14 @@
+version: 2.1
+
+executors:
+  worker:
+    docker:
+      - image: ubuntu:latest
+jobs:
+  build:
+    executor: worker
+    steps:
+      - run:
+          name: Hello World
+          command: |
+            echo "Hello World"
